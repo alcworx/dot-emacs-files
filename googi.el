@@ -21,6 +21,7 @@
 
 ;;(require 'pavel-color-theme)
 (require 'my-keys-minor-mode)
+(require 'pavel-btools)
 
 
 
