@@ -16,7 +16,7 @@
 (require 'pavel-org)
 
 (require 'pavel-w3m)
-(require 'mail)
+;;(require 'mail)
 
 
 ;;(require 'pavel-color-theme)
