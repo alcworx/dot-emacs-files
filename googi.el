@@ -22,6 +22,7 @@
 ;;(require 'pavel-color-theme)
 (require 'my-keys-minor-mode)
 (require 'pavel-btools)
+(setq auto-mode-alist (cons '("\\.F$" . f90-mode) auto-mode-alist))
 
 
 
