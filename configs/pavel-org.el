@@ -4,6 +4,12 @@
 
 (define-key mode-specific-map [?a] 'org-agenda)
 
+;; define some keybindings
+(global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key (kbd "<f11>") 'org-clock-goto)
+(global-set-key (kbd "C-<f11>") 'org-clock-in)
+
+
 (eval-after-load "org"
   '(progn
      (define-prefix-command 'org-todo-state-map)
