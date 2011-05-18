@@ -28,6 +28,12 @@
        #'(lambda nil (interactive) (org-todo "STARTED")))
      (define-key org-todo-state-map "w"
        #'(lambda nil (interactive) (org-todo "WAITING")))))
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "WAITING(w@/!)" "STARTED(s!)" "|" "DEFERRED(f)" "DONE(d!)" "CANCELLED(c)")))
+(setq org-use-fast-todo-selection t)
+;;(setq org-treat-S-cursor-todo-selection-as-state-change nil)
+
 (eval-after-load "org-agenda"
   '(progn
 
