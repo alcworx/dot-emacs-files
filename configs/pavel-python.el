@@ -17,6 +17,6 @@
                                       interpreter-mode-alist))
    (autoload 'python-mode "python-mode" "Python editing mode." t)
 
-(require 'pymacs)
-(pymacs-load "ropemacs" "rope-")
+;; (require 'pymacs)
+;; (pymacs-load "ropemacs" "rope-")
 (provide 'pavel-python)
