@@ -32,6 +32,8 @@
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAITING(w@/!)" "STARTED(s!)" "|" "DEFERRED(f)" "DONE(d!)" "CANCELLED(c)")))
 (setq org-use-fast-todo-selection t)
+(setq org-default-notes-file (concat "~/Dropbox/org" "/notes.org"))
+(define-key global-map "\C-cc" 'org-capture)
 ;;(setq org-treat-S-cursor-todo-selection-as-state-change nil)
 
 (eval-after-load "org-agenda"
