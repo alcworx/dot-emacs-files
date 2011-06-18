@@ -1,6 +1,7 @@
 (let ((default-directory "/usr/share/emacs/site-lisp/"))
       (normal-top-level-add-subdirs-to-load-path))
 (add-to-list 'load-path "~/.emacs.d/configs/")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/")
 (let ((default-directory "~/.emacs.d/configs/"))
       (normal-top-level-add-subdirs-to-load-path))
 
@@ -22,7 +23,7 @@
 ;;(require 'pavel-color-theme)
 (require 'my-keys-minor-mode)
 (require 'pavel-btools)
-(setq auto-mode-alist (cons '("\\.F$" . f90-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.[fF]$" . f90-mode) auto-mode-alist))
 
 
 
