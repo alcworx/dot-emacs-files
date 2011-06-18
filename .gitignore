@@ -1,6 +1,8 @@
 backups
+plugins
 auto-save-list
 elpa
 eshell
 places
 tramp
+.org-id-locations
