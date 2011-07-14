@@ -4,12 +4,12 @@
 
 (define-key mode-specific-map [?a] 'org-agenda)
 
-;; define some keybindings
-(global-set-key "\C-cb" 'org-iswitchb)
-(global-set-key (kbd "<f11>") 'org-clock-goto)
-(global-set-key (kbd "C-<f11>") 'org-clock-in)
+;; ;; define some keybindings
+;; (global-set-key "\C-cb" 'org-iswitchb)
+;; (global-set-key (kbd "<f11>") 'org-clock-goto)
+;; (global-set-key (kbd "C-<f11>") 'org-clock-in)
 
-
+(setq org-agenda-files (quote ("~/Dropbox/org/agenda")))
 (eval-after-load "org"
   '(progn
      (define-prefix-command 'org-todo-state-map)
@@ -30,7 +30,7 @@
        #'(lambda nil (interactive) (org-todo "WAITING")))))
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "WAITING(w@/!)" "STARTED(s!)" "|" "DEFERRED(f)" "DONE(d!)" "CANCELLED(c)")))
+      '((sequence "TODO(t)" "WAITING(w@/!)" "STARTED(s!)" "NEXT(n!)" "MAYBE(m!)" "|"  "DEFERRED(f)" "DONE(d!)" "CANCELLED(c@)")))
 (setq org-use-fast-todo-selection t)
 (setq org-default-notes-file (concat "~/Dropbox/org" "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
@@ -44,11 +44,11 @@
      (define-key org-agenda-mode-map "\C-p" 'previous-line)
      (define-key org-agenda-keymap "\C-p" 'previous-line)))
 
-(org-remember-insinuate)
+;; (org-remember-insinuate)
 
-(add-hook 'remember-mode-hook 'org-remember-apply-template)
+;; (add-hook 'remember-mode-hook 'org-remember-apply-template)
 
-(define-key global-map [(control meta ?r)] 'remember)
+;; (define-key global-map [(control meta ?r)] 'remember)
 
 (custom-set-variables
  ;; '(org-agenda-files (quote ("/home/googi/org/todo.org")))
@@ -78,10 +78,31 @@
         (org-agenda-skip-entry-if (quote scheduled) (quote deadline)
                       (quote regexp) "<[^>\n]+>")))
          (org-agenda-overriding-header "Unscheduled TODO entries: "))))))
- '(org-remember-store-without-prompt t)
-  '(org-remember-templates
-    ;; (quote ((116 "* TODO %?\n  %u" "/home/googi/org/todo.org" "Tasks")
-    ;;     (110 "* %u %?" "C:/Users/Pavel/org/notes.org" "Notes"))))
- '(remember-annotation-functions (quote (org-remember-annotation)))
- '(remember-handler-functions (quote (org-remember-handler)))))
+ ;; '(org-remember-store-without-prompt t)
+ ;;  '(org-remember-templates
+ ;;    ;; (quote ((116 "* TODO %?\n  %u" "/home/googi/org/todo.org" "Tasks")
+ ;;    ;;     (110 "* %u %?" "C:/Users/Pavel/org/notes.org" "Notes"))))
+ ;; '(remember-annotation-functions (quote (org-remember-annotation)))
+ ;; '(remember-handler-functions (quote (org-remember-handler))))
+  )
+
+; Targets include this file and any file contributing to the agenda - up to 2 levels deep
+(setq org-refile-targets (quote ((nil :maxlevel . 2)
+                                 (org-agenda-files :maxlevel . 2))))
+
+; Stop using paths for refile targets - we file directly with IDO
+(setq org-refile-use-outline-path nil)
+
+; Targets complete directly with IDO
+(setq org-outline-path-complete-in-steps nil)
+
+; Allow refile to create parent tasks with confirmation
+(setq org-refile-allow-creating-parent-nodes (quote confirm))
+
+; Use IDO for both buffer and file completion and ido-everywhere to t
+(setq org-completion-use-ido t)
+(setq ido-everywhere t)
+(setq ido-max-directory-size 100000)
+(ido-mode (quote both))
+
 (provide 'pavel-org)
