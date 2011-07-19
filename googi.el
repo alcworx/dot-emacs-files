@@ -24,6 +24,7 @@
 (require 'my-keys-minor-mode)
 (require 'pavel-btools)
 (setq auto-mode-alist (cons '("\\.[fF]$" . f90-mode) auto-mode-alist))
+(setq default-input-method "russian-computer")
 
 
 
