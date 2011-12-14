@@ -4,6 +4,8 @@
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/")
 (let ((default-directory "~/.emacs.d/configs/"))
   (normal-top-level-add-subdirs-to-load-path))
+(let ((default-directory "~/.emacs.d/elpa/"))
+  (normal-top-level-add-subdirs-to-load-path))
 
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/") 
                            ("gnu" . "http://elpa.gnu.org/packages/")))

@@ -1,7 +1,8 @@
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 
-(define-key my-keys-minor-mode-map "\C-x\C-m" 'execute-extended-command)
+(define-key my-keys-minor-mode-map "\C-x\C-m" 'smex)
 (define-key my-keys-minor-mode-map "\C-c\C-m" 'execute-extended-command)
+(define-key my-keys-minor-mode-map "M-X" 'smex-major-mode-commands)
 (define-key my-keys-minor-mode-map "\C-cv" 'eval-buffer)
 (define-key my-keys-minor-mode-map (kbd "<C-tab>") 'ido-switch-buffer)
 (define-key my-keys-minor-mode-map (kbd "<backtab>") 'other-window)
@@ -38,9 +39,5 @@
   (revert-buffer t t t)
   )
 
-(global-set-key (kbd "C-x m") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;; This is your old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 (provide 'my-keys-minor-mode)
