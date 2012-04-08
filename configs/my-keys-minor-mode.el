@@ -2,7 +2,7 @@
 
 (define-key my-keys-minor-mode-map "\C-x\C-m" 'smex)
 (define-key my-keys-minor-mode-map "\C-c\C-m" 'execute-extended-command)
-(define-key my-keys-minor-mode-map "M-X" 'smex-major-mode-commands)
+;;(define-key my-keys-minor-mode-map "M-X" 'smex-major-mode-commands)
 (define-key my-keys-minor-mode-map "\C-cv" 'eval-buffer)
 (define-key my-keys-minor-mode-map (kbd "<C-tab>") 'ido-switch-buffer)
 (define-key my-keys-minor-mode-map (kbd "<backtab>") 'other-window)
