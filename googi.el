@@ -3,6 +3,7 @@
 (add-to-list 'load-path "~/.emacs.d/configs/")
 (add-to-list 'load-path "~/.emacs.d/plugins/")
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/wl")
 (let ((default-directory "~/.emacs.d/configs/"))
   (normal-top-level-add-subdirs-to-load-path))
 (let ((default-directory "~/.emacs.d/elpa/"))
@@ -24,6 +25,7 @@
 
 (require 'pavel-w3m)
 ;;(require 'mail)
+(autoload 'wl "wl" "Wanderlust" t)
 (require 'pavel-dired)
 
 
