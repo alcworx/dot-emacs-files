@@ -32,6 +32,7 @@
 (require 'pavel-color-theme)
 (require 'my-keys-minor-mode)
 (require 'pavel-btools)
+(require 'pavel-conkeror)
 
 (require 'smex)
 (smex-initialize)
