@@ -2,6 +2,7 @@
       (normal-top-level-add-subdirs-to-load-path))
 (add-to-list 'load-path "~/.emacs.d/configs/")
 (add-to-list 'load-path "~/.emacs.d/plugins/")
+(add-to-list 'load-path "~/.emacs.d/plugins/evil")
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/")
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/wl")
 (let ((default-directory "~/.emacs.d/configs/"))
@@ -36,6 +37,9 @@
 
 (require 'smex)
 (smex-initialize)
+
+(require 'pavel-evil)
+
 
 (setq auto-mode-alist (cons '("\\.[fF]$" . f90-mode) auto-mode-alist))
 (setq default-input-method "russian-computer")

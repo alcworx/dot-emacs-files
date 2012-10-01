@@ -10,6 +10,7 @@
 ;; (define-key my-keys-minor-mode-map "\C-m" 'return)
 (define-key my-keys-minor-mode-map "\C-t" 'delete-backward-char)
 (define-key my-keys-minor-mode-map "\C-q" 'undo)
+(define-key my-keys-minor-mode-map (kbd "<f9>") 'compile)
 (define-key my-keys-minor-mode-map "\C-x\C-k" 'kill-buffer)
 (define-key my-keys-minor-mode-map (kbd "<C-tab>") 'ido-switch-buffer)
 (define-key my-keys-minor-mode-map [f5] 'refresh-file)
