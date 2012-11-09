@@ -31,7 +31,7 @@
 (require 'pavel-dired)
 
 
-(require 'pavel-color-theme)
+;;(require 'pavel-color-theme)
 (require 'my-keys-minor-mode)
 (require 'pavel-btools)
 (require 'pavel-conkeror)

@@ -8,7 +8,7 @@
      ))
 (load-file "~/.emacs.d/plugins/color-theme-twilight.el")
 ;; select theme - first list element is for windowing system, second is for console/terminal
-(setq color-theme-choices '(color-theme-twilight color-theme-midnight))
+(setq color-theme-choices '(color-theme-zenburn color-theme-midnight))
 
 ;; test for each frame or console
 (require 'cl)	
