@@ -18,6 +18,7 @@
 (require 'pavel-lisp)
 (require 'pavel-ocaml)
 (require 'pavel-haskell)
+(require 'pavel-sml)
 (require 'quack)
 
 
